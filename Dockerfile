@@ -48,7 +48,7 @@ CMD pwsh -c \
             else { \
                 '*' \
             }; \
-            $splat.ExcludeRule = 'PSUseDeclaredVarsMoreThanAssignments' \
+            \$splat.ExcludeRule = 'PSUseDeclaredVarsMoreThanAssignments'; \
             break; \
         }; \
     \
@@ -57,8 +57,8 @@ CMD pwsh -c \
             break; \
         }; \
         Default { \
-            $splat.IncludeRule = '*' \
-            $splat.ExcludeRule = 'PSUseDeclaredVarsMoreThanAssignments' \
+            \$splat.IncludeRule = '*'; \
+            \$splat.ExcludeRule = 'PSUseDeclaredVarsMoreThanAssignments'; \
         }; \
     }; \
     \

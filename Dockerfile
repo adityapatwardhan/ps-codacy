@@ -4,7 +4,7 @@ ARG IMAGE_NAME=PSCodacy
 
 LABEL maintainer="Aditya Patwardhan <adityap@microsoft.com>"
 
-RUN pwsh -c Install-Module PSScriptAnalyzer -Force -Confirm:\$false -Scope AllUsers
+RUN pwsh -c Install-Module PSScriptAnalyzer -Force -Confirm:\$false -Scope AllUsers -RequiredVersion 1.18.0
 
 RUN pwsh -c " \
 \$null = New-Item -Type Directory /docs -Force; \
